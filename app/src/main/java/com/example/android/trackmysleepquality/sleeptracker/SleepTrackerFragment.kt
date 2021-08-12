@@ -77,9 +77,11 @@ class SleepTrackerFragment : Fragment() {
         val adapter = SleepNightAdapter()
         binding.sleepList.adapter= adapter
 
+        // ListAdapter provides a method called submitList() to tell ListAdapter
+        // that a new version of the list is available.
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer{
             it?.let {
-                adapter.data = it
+                adapter.submitList(it)
             }
         })
 
