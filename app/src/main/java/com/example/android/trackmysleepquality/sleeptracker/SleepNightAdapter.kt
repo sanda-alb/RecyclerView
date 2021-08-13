@@ -41,16 +41,9 @@ class SleepNightAdapter: ListAdapter<SleepNight, SleepNightAdapter.ViewHolder>(S
         }
     }
 
-
-
-
-
-
-
-
 }
 
-class SleepNightDiffCallback: DiffUtil.ItemCallback<SleepNight>(){
+class SleepNightDiffCallback: DiffUtil.ItemCallback<SleepNight>() {
 
     override fun areItemsTheSame(oldItem: SleepNight, newItem: SleepNight): Boolean {
         return oldItem.nightId == newItem.nightId
