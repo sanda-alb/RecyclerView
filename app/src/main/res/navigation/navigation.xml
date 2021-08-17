@@ -58,7 +58,8 @@
     <fragment
         android:id="@+id/sleepDetailFragment"
         android:name="com.example.android.trackmysleepquality.sleepdetail.SleepDetailFragment"
-        android:label="SleepDetailFragment" >
+        android:label="fragment_sleep_detail"
+        tools:layout="@layout/fragment_sleep_detail" >
         <argument
             android:name="sleepNightKey"
             app:argType="long" />
