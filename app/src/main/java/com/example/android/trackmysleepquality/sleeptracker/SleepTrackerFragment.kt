@@ -85,7 +85,7 @@ class SleepTrackerFragment : Fragment() {
         // that a new version of the list is available.
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer{
             it?.let {
-                adapter.submitList(it)
+                adapter.addHeaderAndSubmitList(it)
             }
         })
 
